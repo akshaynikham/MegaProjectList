@@ -33,7 +33,7 @@ public class FibonacciSequence {
 				isntDigit = false;
 			} catch (Exception e) {
 				System.out.println();
-				System.out.print("Must enter a digit between 1 and 100: ");
+				System.out.print("Must enter a digit: ");
 				scanner = new Scanner(System.in);
 			}
 		}
