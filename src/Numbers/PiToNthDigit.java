@@ -19,16 +19,18 @@ public class PiToNthDigit {
 	 */
 	public static void main(String[] args) {
 
-		System.out
-				.print("To how many decimal places do you want to print PI? (Max 100):");
+		System.out.print("To how many decimal places do you want to print PI? (Max 100):");
 		Scanner scanner = new Scanner(System.in);
 		boolean isntDigit = true;
 		int digit = 0;
-		
-		//This while statement will check to make sure that the input is an integer
-		//between 1 and 100. It will ask for input again if the user inputs an integer 
-		//below 1 or greater than 100, or if the user inputs something that is not 
-		//an integer at all.
+
+		// This while statement will check to make sure that the input is an
+		// integer
+		// between 1 and 100. It will ask for input again if the user inputs an
+		// integer
+		// below 1 or greater than 100, or if the user inputs something that is
+		// not
+		// an integer at all.
 		while (isntDigit) {
 
 			try {
@@ -39,8 +41,8 @@ public class PiToNthDigit {
 				System.out.print("Must enter a digit between 1 and 100: ");
 				scanner = new Scanner(System.in);
 			}
-			
-			if (digit < 1 && isntDigit == false) {
+
+			if ((digit < 1 || digit > 100) && isntDigit == false) {
 				isntDigit = true;
 				System.out.println();
 				System.out.print("Must enter a digit between 1 and 100: ");
@@ -50,7 +52,7 @@ public class PiToNthDigit {
 
 		String format = "#.";
 
-		//Adds the appropriate number of 0's to the formatter.
+		// Adds the appropriate number of 0's to the formatter.
 		for (int i = 1; i <= digit; i++) {
 			format = format + "0";
 		}
