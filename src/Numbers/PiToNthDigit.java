@@ -24,6 +24,11 @@ public class PiToNthDigit {
 		Scanner scanner = new Scanner(System.in);
 		boolean isntDigit = true;
 		int digit = 0;
+		
+		//This while statement will check to make sure that the input is an integer
+		//between 1 and 100. It will ask for input again if the user inputs an integer 
+		//below 1 or greater than 100, or if the user inputs something that is not 
+		//an integer at all.
 		while (isntDigit) {
 
 			try {
@@ -45,6 +50,7 @@ public class PiToNthDigit {
 
 		String format = "#.";
 
+		//Adds the appropriate number of 0's to the formatter.
 		for (int i = 1; i <= digit; i++) {
 			format = format + "0";
 		}
