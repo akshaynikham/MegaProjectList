@@ -37,12 +37,24 @@ public class PrimeFactorization {
 
 		System.out.println();
 
-		for (index = digit; index > 0; index--) {
-			if (digit % index == 0) {
-				System.out.print(index + " ");
+		if (digit >= 0) {
+
+			for (index = digit; index > 0; index--) {
+				if (digit % index == 0) {
+					System.out.print(index + " ");
+				}
+			}
+		}
+		
+		else{
+
+			digit = (digit - digit - digit);
+			for (index = digit; index > 0; index--) {
+				if (digit % index == 0) {
+					System.out.print(index + " ");
+				}
 			}
 		}
 
 	}
-
 }
